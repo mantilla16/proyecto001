@@ -1,0 +1,54 @@
+/* .head{
+    border: red 1px solid;
+} */
+
+.title{
+    text-align: center;
+    font-family: cursive;
+}
+
+hr{
+    width: 80%;
+}
+.navBar{
+    display: flex;
+    justify-content: space-evenly;
+    /* background: aliceblue; */
+    height: 60px;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    animation: slideIn 1s  linear forwards; /* Aplica la animación */
+}
+
+
+/* Definición de la animación */
+@keyframes slideIn {
+    0% {
+        opacity: 0; /* Comienza invisible */
+        transform: translateX(-200px); /* Comienza desplazada */
+    }
+    100% {
+        opacity: 1; /* Aparece completamente */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
+}
+
+.navBar a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    /* font-weight: bold; */
+}
+
+.imgDiv{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+.fristImg{
+    width: 1300px;
+    height: 400px;
+}
