@@ -48,7 +48,74 @@ hr{
     top: 20px;
 }
 
-.fristImg{
-    width: 1300px;
-    height: 400px;
+.hero-image{
+    width: 1400px;
+    height: 530px;
+    filter: blur(1.5px);
+}
+
+.text{
+    position: absolute;
+    top: 50%; /* Posiciona el texto al centro vertical */
+    left: 50%; /* Posiciona el texto al centro horizontal */
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra para mejor visibilidad */
+    text-align: center;
+    animation: slideIn2 1s  linear forwards; /* Aplica la animación */
+}
+
+/* Definición de la animación */
+@keyframes slideIn2 {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%)   translateX(-200px); /* Desplaza horizontalmente desde fuera del área */
+    }
+    100% {
+        opacity: 1;
+        transform:  translate(-50%, -50%) translateX(0); /* Regresa al centro */
+    }
+}
+
+.hero-text{
+    position: relative;
+    width: 80%;
+    height: 300px;
+    top: 100px;
+    margin: auto;
+}
+
+.links{
+    display: flex; /* Usa flexbox para controlar los enlaces */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    gap: 35%; /* Espaciado entre enlaces */
+}
+
+.links a{
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+}
+
+
+.links a:hover {
+    background-color: #e64a19; /* Color al pasar el cursor */
+}
+
+.text2{
+    font-size: 45px;
+    text-align: center;
+   
+}
+
+.next{
+    width: 500px;
+    height: 500px;
 }
