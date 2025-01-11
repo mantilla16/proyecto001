@@ -1,6 +1,11 @@
 /* .head{
     border: red 1px solid;
 } */
+
+.html{
+    box-sizing: border-box;
+}
+
 .body{
     margin: 0;
 }
