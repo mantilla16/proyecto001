@@ -16,7 +16,7 @@ hr{
     display: flex;
     justify-content: space-evenly;
     /* background: aliceblue; */
-    height: 60px;
+    height: 8vh;
     align-items: center;
     width: 80%;
     margin: 0 auto;
@@ -28,7 +28,7 @@ hr{
 @keyframes slideIn {
     0% {
         opacity: 0; /* Comienza invisible */
-        transform: translateX(-200px); /* Comienza desplazada */
+        transform: translateX(-10vw); /* Comienza desplazada */
     }
     100% {
         opacity: 1; /* Aparece completamente */
@@ -43,6 +43,7 @@ hr{
 }
 
 .imgDiv{
+    
     display: flex;
     justify-content: center;
     position: relative;
@@ -53,6 +54,8 @@ hr{
     width: 1400px;
     height: 530px;
     filter: blur(1.5px);
+
+    
 }
 
 .text{
@@ -60,12 +63,14 @@ hr{
     top: 50%; /* Posiciona el texto al centro vertical */
     left: 50%; /* Posiciona el texto al centro horizontal */
     color: white;
-    font-size: 60px;
+    font-size: xxx-large;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Añade sombra para mejor visibilidad */
     text-align: center;
     animation: slideIn2 1s  linear forwards; /* Aplica la animación */
 }
+
+
 
 /* Definición de la animación */
 @keyframes slideIn2 {
@@ -92,6 +97,21 @@ hr{
     justify-content: center; /* Centra los enlaces horizontalmente */
     gap: 30%; /* Espaciado entre enlaces */
     
+}
+
+.button{
+
+    width: 116px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;/*DESCRIPTION A*/
 }
 
 .links a{
@@ -160,25 +180,10 @@ hr{
     font-size: 18px;
 }
 
-.description a{
-    width: 116px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff5722;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    
-}
-
-.description a:hover {
-        background: transparent;
-        border: #ff5722 1px solid;
-        color: #ff5722;
+.description a:hover, .description2 a:hover {
+    background: transparent;
+    border: #ff5722 1px solid;
+    color: #ff5722;
 }
 
 .make-order{
@@ -206,27 +211,6 @@ hr{
 .description2 p{
     text-wrap-style: balance;
     font-size: 18px;
-}
-
-.description2 a{
-    width: 116px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff5722;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    
-}
-
-.description2 a:hover {
-        background: transparent;
-        border: #ff5722 1px solid;
-        color: #ff5722;
 }
 
 .specials{
@@ -290,20 +274,11 @@ hr{
 }
 
 .order a{
-    width: 116px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    color: red;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
     position: relative;
     top: 140px;
     left: 230px;
-    transition: background-color 0.3s ease;
+    background-color: white;
+    color: red;
 }
 
 .order a:hover{
@@ -354,3 +329,48 @@ hr{
     margin-top: 20px;
     font-size: 14px;
   }
+
+
+  @media (max-width:1000px){
+    .navBar{
+        display: flex;
+        height: auto;
+        align-items: center;
+        animation: slideIn 1s linear forwards;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    .title h1 {
+        font-size: 1rem;
+    }
+
+    .imgDiv .text{
+        font-size: xxx-large;
+    }
+
+    .hero-image{
+        width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+        height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+        object-fit: cover; /* Escala la imagen para cubrir todo el área sin distorsionarla */
+        display: block; /* Elimina el espacio blanco debajo de la imagen causado por inline-block */
+    }
+    .make-order img{
+       display: none;
+    }
+
+    .second-image{
+        display: none;
+    }
+    .galery img{
+        width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+        height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+        object-fit: cover; /* Escala la imagen para cubrir todo el área sin distorsionarla */
+        display: block; /* Elimina el espacio blanco debajo de la imagen causado por inline-block */
+        margin: 0; /* Elimina márgenes si los hubiera */
+    };
+
+    .order{
+        width: 390px !important;
+        height: 450px;
+    }
+}
