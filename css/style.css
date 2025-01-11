@@ -142,7 +142,7 @@ hr{
 }
 
 .logo-circle{
-    position: relative;
+    position: absolute;
     left: -351px;
     bottom: -128px;
     filter: opacity(0.2);
@@ -352,13 +352,15 @@ hr{
         font-size: 1rem;
     }
 
-    .imgDiv .text{
-        font-size: xxx-large;
+    .text{
+        font-size: 6vw;
+        width: 23rem;
+        text-align: center;
     }
 
     .hero-image{
         width: 100vw; /* Ocupa el 100% del ancho de la ventana */
-        height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+        height: 26vh; /* Ocupa el 100% de la altura de la ventana */
         object-fit: cover; /* Escala la imagen para cubrir todo el área sin distorsionarla */
         display: block; /* Elimina el espacio blanco debajo de la imagen causado por inline-block */
     }
