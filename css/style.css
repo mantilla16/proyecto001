@@ -4,9 +4,12 @@
 
 .html{
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .body{
+    box-sizing: border-box;
+    overflow-x: hidden;
     margin: 0;
 }
 .title{
@@ -139,7 +142,7 @@ hr{
 }
 
 .logo-circle{
-    position: absolute;
+    position: relative;
     left: -351px;
     bottom: -128px;
     filter: opacity(0.2);
@@ -358,6 +361,10 @@ hr{
         height: 100vh; /* Ocupa el 100% de la altura de la ventana */
         object-fit: cover; /* Escala la imagen para cubrir todo el área sin distorsionarla */
         display: block; /* Elimina el espacio blanco debajo de la imagen causado por inline-block */
+    }
+
+    .logo-circle{
+        display: none;
     }
     .make-order img{
        display: none;
