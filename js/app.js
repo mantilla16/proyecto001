@@ -12,9 +12,6 @@ const handleScroll = () => {
     } else {
         nextDiv.style.opacity = 0; // Manténlo opaco
     }
-
-    console.log(rect.top);
-    console.log(windowHeight);
     
     if (rect.top <=  windowHeight * 0.1) { // Si está dentro del 80% del viewport
         nextDiv2.style.opacity = 1;

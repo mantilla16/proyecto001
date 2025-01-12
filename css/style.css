@@ -107,21 +107,6 @@ hr{
     
 }
 
-.button{
-
-    width: 116px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ff5722;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;/*DESCRIPTION A*/
-}
-
 .links a{
     display: inline-block;
     padding: 25px 20px;
@@ -139,6 +124,20 @@ hr{
     background-color: #ffcbbb;
     border: #ff5722 1px solid;
     color: #ff5722;
+}
+
+.button{
+    width: 116px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;/*DESCRIPTION A*/
 }
 
 .logo-circle{
@@ -340,6 +339,11 @@ hr{
 
 
   @media (max-width:1000px){
+    
+    .title h1 {
+        font-size: 1rem;
+    }
+
     .navBar{
         display: flex;
         height: auto;
@@ -347,16 +351,7 @@ hr{
         animation: slideIn 1s linear forwards;
         flex-direction: column;
         gap: 0.3rem;
-    }
-    .title h1 {
-        font-size: 1rem;
-    }
-
-    .text{
-        font-size: 6vw;
-        width: 23rem;
-        text-align: center;
-    }
+    } 
 
     .hero-image{
         width: 100vw; /* Ocupa el 100% del ancho de la ventana */
@@ -365,16 +360,108 @@ hr{
         display: block; /* Elimina el espacio blanco debajo de la imagen causado por inline-block */
     }
 
+    .text{
+        font-size: 6vw;
+        width: 23rem;
+        text-align: center;
+    }
+
+    .hero-text{
+        position: relative;
+        width: auto;
+        height: 20rem;
+        top: auto;
+        margin: 0;
+    }
+    
+    .links{
+        display: flex;
+        justify-content: center;
+        gap: 14%;
+        position: relative;
+        top: 2rem;
+    }
+
+    .links a{
+        padding: 10px 20px;
+        background-color: #ff5722;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 4vw;
+        cursor: pointer;
+    }
+
+    .links a:hover {
+        background-color: #ffcbbb;
+        border: #ff5722 1px solid;
+        color: #ff5722;
+    }
+
     .logo-circle{
         display: none;
     }
-    .make-order img{
-       display: none;
+
+    .text2{
+        font-size: 6vw;
+        text-align: center;
+        position: relative;
+        top: 4rem; 
     }
 
-    .second-image{
-        display: none;
+    .content{
+        background-color: bisque;
+        height: 1147px;
     }
+
+    .main-course{
+        position: relative;
+        top: auto;
+        height: auto;
+        background-color: transparent;
+        margin-bottom: 2rem;
+    }
+    
+    .second-image {
+        height: 200px;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .description {
+        width: auto;
+        height: auto;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+    }
+    
+    .make-order{
+        height: auto;
+    }
+
+    .make-order img{
+        position: relative;
+        height: 200px;
+        left: auto;
+        bottom: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .description h1{
+        margin: 0;
+    }
+
     .galery img{
         width: 100vw; /* Ocupa el 100% del ancho de la ventana */
         height: 100vh; /* Ocupa el 100% de la altura de la ventana */
@@ -384,7 +471,13 @@ hr{
     };
 
     .order{
-        width: 390px !important;
+        width: auto;
         height: 450px;
     }
+
+    .specials,
+     .main-course{
+        opacity: 1 !important;
+        transition: none;
+     }
 }
