@@ -31,7 +31,6 @@ hr{
     animation: slideIn 1s  linear forwards; /* Aplica la animación */
 }
 
-
 /* Definición de la animación */
 @keyframes slideIn {
     0% {
@@ -48,6 +47,32 @@ hr{
     text-decoration: none;
     color: black;
     font-size: 20px;
+}
+
+/* Media Queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navBar a {
+        padding: 10px 0;
+    }
+
+    hr {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    .navBar {
+        width: 100%;
+    }
 }
 
 .imgDiv{
