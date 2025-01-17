@@ -3,106 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>La sazón de viví</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style2.css" as="style">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
-<body class="body">
+<body>
     <header>
-        <div class="head">
-            <div class="title">
-                <h1>LA SAZÓN DE VIVI</h1>
-            </div>
-            <hr>
-            <div class="navBar">
-                <a href="#">Home</a>
-                <a href="#">Menu</a>
-                <a href="#">Quienes somos</a>
-                <a href="#">Platos de la casa</a>
-            </div>
-        </div>
+        <h1>LA SAZÓN DE VIVI</h1>
     </header>
-
-        <figure class="imgDiv">
-            <img class="hero-image" src="img/fondoportada2.png" alt="Un plato gourmet servido en una mesa elegante.">
-            <figcaption class="text">Sabores que inspiran, servidos con pasión en cada plato.</figcaption>
-        </figure>
-     
-        <div class="hero-text">
-            <div class="links">
-                <a href="#">Nuestro menu</a>
-                <a href="#">Haz tu pedido</a>
-                
+    <hr>
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Quienes somos</a>
+            <a href="#">Platos de la casa</a>
+        </nav>
+    </div>
+    
+    <section class="hero">
+        <div class="contenido-hero">
+            <h2>Sabores que inspiran, servidos con pasión en cada plato.</h2>
+            <div class="ubicacion">
+                <a class="boton" href="#">Nuestro menu</a>
+                <a class="boton" href="#">Haz tu pedido</a>
             </div>
-                <img class="logo-circle" src="img/logo002.gif" alt="La sazon de vivi">
-            <p class="text2">Aquí celebramos lo sencillo y lo auténtico: buena comida, sabor casero y una bienvenida cálida. Bienvenidos a La Sazón de vivi, donde siempre eres de la familia.</p>
+            
         </div>
-
-        <div class="content">
-            <div class="main-course">
-                <img class ="second-image" src="img/plato1.png" alt="Pastas carbonara.">
-                <div class="description"> 
-                    <h3>La favorita de los fans</h3>
-                    <h1>Pasta carbonara - <br> El máximo placer</h1>
-                    <p>Un clásico italiano que destaca por su cremosidad, gracias a una mezcla perfecta de yemas de huevo y queso parmesano. 
-                    Todo acompañado de pasta al dente para brindar un plato lleno de sabor y tradición. Ideal para quienes buscan una versión auténtica y sin carne.</p>
-                    <a class="button" href="#">Ver menú</a>
-                </div>
+    </section>    
+    
+    <main class="main">
+            <section class="leyenda">
+                <p class="p1">Aquí celebramos lo sencillo y lo auténtico: buena comida, sabor casero y una bienvenida cálida. Bienvenidos a La Sazón de vivi, 
+                    donde siempre eres de la familia.</p>
+            </section >
+            
+            <div class="favoritos">
+                <section class="plato">  
+                    <img src="img/plato1.png">
+                    <div class="contenido">
+                        <h3>La favorita de los fans</h3>
+                        <h2>Pasta carbonara - <br> El máximo placer</h2>
+                        <p>Un clásico italiano que destaca por su cremosidad, gracias a una mezcla perfecta de yemas de huevo y queso parmesano. 
+                        Todo acompañado de pasta al dente para brindar un plato lleno de sabor y tradición. 
+                        Ideal para quienes buscan una versión auténtica y sin carne.</p> 
+                    </div>              
+                </section >
+                <section class="plato2">
+                    <img src="img/foto02.avif">
+                    <div class="contenido">
+                        <h3>Una pausa que inspira</h3>
+                        <h2>Recarga tu día con nuestro almuerzo ejecutivo</h2>
+                        <p>Haz una pausa en tu día y disfruta de nuestros almuerzos ejecutivos, pensados para ofrecerte sabor, calidad y rapidez. 
+                        Platos preparados con ingredientes frescos y un toque casero que hará que cada bocado sea una experiencia reconfortante. 
+                        Ideal para recargar energías y continuar con éxito tu jornada.</p>
+                    </div>
+                </section>
             </div>
-            <div class="make-order">
-                <img src="img/foto02.avif" alt="Niño comiendo pastas.">
-                <div class="description"> 
-                    <h3>Una pausa que inspira</h3>
-                    <h1>Recarga tu día con nuestro almuerzo ejecutivo</h1>
-                    <p>Haz una pausa en tu día y disfruta de nuestros almuerzos ejecutivos, pensados para ofrecerte sabor, calidad y rapidez. 
-                    Platos preparados con ingredientes frescos y un toque casero que hará que cada bocado sea una experiencia reconfortante. 
-                    Ideal para recargar energías y continuar con éxito tu jornada.</p>
-                    <a class="button" href="#">Pedir online</a>
+    
+        <section class="box-carrousel">
+            <h1>Especialidades</h1>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="img/albondigas.png" alt="Albóndigas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/bandejapaisa.png" alt="Bandeja Paisa">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/costillas.png" alt="Costillas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pastaschamp.jpg" alt="Costillas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/polloguisado.png" alt="Costillas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/mojarra.png" alt="Costillas">
+                    </div>
+                    <!-- Más imágenes aquí -->
                 </div>
-            </div>
-        </div>
-        <section>
-            <div class="specials">
-                <h1>Especialidades</h1>
-                <div class="galery">
-                    <img src="img/pastaschamp.jpg" alt="Pastas con champiñones.">
-                    <img src="img/mojarra.png" alt="Pastas con champiñones.">
-                    <img src="img/albondigas.png" alt="Pastas con champiñones.">
-                    <img src="img/costillas.png" alt="Pastas con champiñones.">
-                    <img src="img/bandejapaisa.png" alt="Pastas con champiñones.">
-                    <img src="img/polloguisado.png" alt="Pastas con champiñones.">
+                <div class="carousel-nav">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+                <div class="carousel-indicators">
+                    <button data-slide="0" class="active"></button>
+                    <button data-slide="1"></button>
+                    <button data-slide="2"></button>
+                    <button data-slide="3"></button>
+                    <button data-slide="4"></button>
+                    <button data-slide="5"></button>
+                    <!-- Más botones aquí -->
                 </div>
             </div>
         </section>
 
-        <figure class="imgDiv2">
-           <div class="order">
-                <h1>¡Pedir tu almuerzo ejecutivo es rápido y fácil! <br> </h1>
+        <section class="pedidos-comida">
+            <div class="order">
+                <h2>¡Pedir tu almuerzo ejecutivo es rápido y fácil! <br> </h2>
                 <p>Haz tu pedido online por WhatsApp y disfruta de una comida deliciosa sin complicaciones. ¡Escríbenos ahora!</p>
-                <a class="button" href="#">Pedir ahora</a>
-           </div>
-        </figure>
+                <a class="boton" href="#">Pedir ahora</a>
+            </div>
+        </section>
+    </main>        
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+            <h3>Sobre Nosotros</h3>
+            <p>Ofrecemos los mejores almuerzos ejecutivos, rápidos y deliciosos.</p>
+            </div>
+            <div class="footer-section">
+            <h3>Contáctanos</h3>
+            <p>📍 Dirección: Calle 123, Ciudad</p>
+            <p>📞 Teléfono: +57 123 456 7890</p>
+            <p>📲 WhatsApp: +57 987 654 3210</p>
+            </div>
+            <div class="footer-section">
+            <h3>Síguenos</h3>
+            <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 La Sazón de Vivi. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-        <footer class="footer">
-            <div class="footer-container">
-              <div class="footer-section">
-                <h3>Sobre Nosotros</h3>
-                <p>Ofrecemos los mejores almuerzos ejecutivos, rápidos y deliciosos.</p>
-              </div>
-              <div class="footer-section">
-                <h3>Contáctanos</h3>
-                <p>📍 Dirección: Calle 123, Ciudad</p>
-                <p>📞 Teléfono: +57 123 456 7890</p>
-                <p>📲 WhatsApp: +57 987 654 3210</p>
-              </div>
-              <div class="footer-section">
-                <h3>Síguenos</h3>
-                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <p>&copy; 2025 La Sazón de Vivi. Todos los derechos reservados.</p>
-            </div>
-          </footer>
-<script src="/js/app.js"></script>
+
+    <script src="/js/app.js" defer></script>
 </body>
+
 </html>

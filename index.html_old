@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>La sazón de viví</title>
+</head>
+<body class="body">
+    <header>
+        <div class="head">
+            <div class="title">
+                <h1>LA SAZÓN DE VIVI</h1>
+            </div>
+            <hr>
+            <div class="navBar">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">Quienes somos</a>
+                <a href="#">Platos de la casa</a>
+            </div>
+        </div>
+    </header>
+
+        <figure class="imgDiv">
+            <img class="hero-image" src="img/fondoportada2.png" alt="Un plato gourmet servido en una mesa elegante.">
+            <figcaption class="text">Sabores que inspiran, servidos con pasión en cada plato.</figcaption>
+        </figure>
+     
+        <div class="hero-text">
+            <div class="links">
+                <a href="#">Nuestro menu</a>
+                <a href="#">Haz tu pedido</a>
+                
+            </div>
+                <img class="logo-circle" src="img/logo002.gif" alt="La sazon de vivi">
+            <p class="text2">Aquí celebramos lo sencillo y lo auténtico: buena comida, sabor casero y una bienvenida cálida. Bienvenidos a La Sazón de vivi, donde siempre eres de la familia.</p>
+        </div>
+
+        <div class="content">
+            <div class="main-course">
+                <img class ="second-image" src="img/plato1.png" alt="Pastas carbonara.">
+                <div class="description"> 
+                    <h3>La favorita de los fans</h3>
+                    <h1>Pasta carbonara - <br> El máximo placer</h1>
+                    <p>Un clásico italiano que destaca por su cremosidad, gracias a una mezcla perfecta de yemas de huevo y queso parmesano. 
+                    Todo acompañado de pasta al dente para brindar un plato lleno de sabor y tradición. Ideal para quienes buscan una versión auténtica y sin carne.</p>
+                    <a class="button" href="#">Ver menú</a>
+                </div>
+            </div>
+            <div class="make-order">
+                <img src="img/foto02.avif" alt="Niño comiendo pastas.">
+                <div class="description"> 
+                    <h3>Una pausa que inspira</h3>
+                    <h1>Recarga tu día con nuestro almuerzo ejecutivo</h1>
+                    <p>Haz una pausa en tu día y disfruta de nuestros almuerzos ejecutivos, pensados para ofrecerte sabor, calidad y rapidez. 
+                    Platos preparados con ingredientes frescos y un toque casero que hará que cada bocado sea una experiencia reconfortante. 
+                    Ideal para recargar energías y continuar con éxito tu jornada.</p>
+                    <a class="button" href="#">Pedir online</a>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="specials">
+                <h1>Especialidades</h1>
+                <div class="galery">
+                    <img src="img/pastaschamp.jpg" alt="Pastas con champiñones.">
+                    <img src="img/mojarra.png" alt="Pastas con champiñones.">
+                    <img src="img/albondigas.png" alt="Pastas con champiñones.">
+                    <img src="img/costillas.png" alt="Pastas con champiñones.">
+                    <img src="img/bandejapaisa.png" alt="Pastas con champiñones.">
+                    <img src="img/polloguisado.png" alt="Pastas con champiñones.">
+                </div>
+            </div>
+        </section>
+
+        <figure class="imgDiv2">
+           <div class="order">
+                <h1>¡Pedir tu almuerzo ejecutivo es rápido y fácil! <br> </h1>
+                <p>Haz tu pedido online por WhatsApp y disfruta de una comida deliciosa sin complicaciones. ¡Escríbenos ahora!</p>
+                <a class="button" href="#">Pedir ahora</a>
+           </div>
+        </figure>
+
+        <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Ofrecemos los mejores almuerzos ejecutivos, rápidos y deliciosos.</p>
+              </div>
+              <div class="footer-section">
+                <h3>Contáctanos</h3>
+                <p>📍 Dirección: Calle 123, Ciudad</p>
+                <p>📞 Teléfono: +57 123 456 7890</p>
+                <p>📲 WhatsApp: +57 987 654 3210</p>
+              </div>
+              <div class="footer-section">
+                <h3>Síguenos</h3>
+                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <p>&copy; 2025 La Sazón de Vivi. Todos los derechos reservados.</p>
+            </div>
+          </footer>
+<script src="/js/app.js"></script>
+</body>
+</html>
