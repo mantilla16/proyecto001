@@ -36,51 +36,82 @@
     </section>    
     
     <main class="main">
-        <section class="leyenda">
-            <p class="p1">Aquí celebramos lo sencillo y lo auténtico: buena comida, sabor casero y una bienvenida cálida. Bienvenidos a La Sazón de vivi, 
-                donde siempre eres de la familia.</p>
-        </section >
-        
-        <div class="favoritos">
-            <section class="plato">  
-                <img src="img/plato1.png">
-                <div class="contenido">
-                    <h3>La favorita de los fans</h3>
-                    <h2>Pasta carbonara - <br> El máximo placer</h2>
-                    <p>Un clásico italiano que destaca por su cremosidad, gracias a una mezcla perfecta de yemas de huevo y queso parmesano. 
-                    Todo acompañado de pasta al dente para brindar un plato lleno de sabor y tradición. 
-                    Ideal para quienes buscan una versión auténtica y sin carne.</p> 
-                </div>              
+            <section class="leyenda">
+                <p class="p1">Aquí celebramos lo sencillo y lo auténtico: buena comida, sabor casero y una bienvenida cálida. Bienvenidos a La Sazón de vivi, 
+                    donde siempre eres de la familia.</p>
             </section >
-            <section class="plato2">
-                <img src="img/foto02.avif">
-                <div class="contenido">
-                    <h3>Una pausa que inspira</h3>
-                    <h2>Recarga tu día con nuestro almuerzo ejecutivo</h2>
-                    <p>Haz una pausa en tu día y disfruta de nuestros almuerzos ejecutivos, pensados para ofrecerte sabor, calidad y rapidez. 
-                    Platos preparados con ingredientes frescos y un toque casero que hará que cada bocado sea una experiencia reconfortante. 
-                    Ideal para recargar energías y continuar con éxito tu jornada.</p>
-                </div>
-            </section>
-        </div>
-    </main>
-    <section>
-            <h1>Especialidades</h1>
-            <img src="img/albondigas.png">
-            <img src="img/bandejapaisa.png">
-            <img src="img/costillas.png">
-            <img src="img/mojarra.png">
-            <img src="img/pastaschamp.jpg">
-            <img src="img/polloguisado.png">
-    </section>
-
-    <section>
-        <img src="img/comida2.jpg">
-        <h2>¡Pedir tu almuerzo ejecutivo es rápido y fácil! <br> </h2>
-        <p>Haz tu pedido online por WhatsApp y disfruta de una comida deliciosa sin complicaciones. ¡Escríbenos ahora!</p>
-        <a href="#">Pedir ahora</a>
-    </section>
             
+            <div class="favoritos">
+                <section class="plato">  
+                    <img src="img/plato1.png">
+                    <div class="contenido">
+                        <h3>La favorita de los fans</h3>
+                        <h2>Pasta carbonara - <br> El máximo placer</h2>
+                        <p>Un clásico italiano que destaca por su cremosidad, gracias a una mezcla perfecta de yemas de huevo y queso parmesano. 
+                        Todo acompañado de pasta al dente para brindar un plato lleno de sabor y tradición. 
+                        Ideal para quienes buscan una versión auténtica y sin carne.</p> 
+                    </div>              
+                </section >
+                <section class="plato2">
+                    <img src="img/foto02.avif">
+                    <div class="contenido">
+                        <h3>Una pausa que inspira</h3>
+                        <h2>Recarga tu día con nuestro almuerzo ejecutivo</h2>
+                        <p>Haz una pausa en tu día y disfruta de nuestros almuerzos ejecutivos, pensados para ofrecerte sabor, calidad y rapidez. 
+                        Platos preparados con ingredientes frescos y un toque casero que hará que cada bocado sea una experiencia reconfortante. 
+                        Ideal para recargar energías y continuar con éxito tu jornada.</p>
+                    </div>
+                </section>
+            </div>
+    
+        <section class="box-carrousel">
+            <h1>Especialidades</h1>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="img/albondigas.png" alt="Albóndigas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/bandejapaisa.png" alt="Bandeja Paisa">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/costillas.png" alt="Costillas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pastaschamp.jpg" alt="Costillas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/polloguisado.png" alt="Costillas">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/mojarra.png" alt="Costillas">
+                    </div>
+                    <!-- Más imágenes aquí -->
+                </div>
+                <div class="carousel-nav">
+                    <button class="prev">❮</button>
+                    <button class="next">❯</button>
+                </div>
+                <div class="carousel-indicators">
+                    <button data-slide="0" class="active"></button>
+                    <button data-slide="1"></button>
+                    <button data-slide="2"></button>
+                    <button data-slide="3"></button>
+                    <button data-slide="4"></button>
+                    <button data-slide="5"></button>
+                    <!-- Más botones aquí -->
+                </div>
+            </div>
+        </section>
+
+        <section class="pedidos-comida">
+            <div class="order">
+                <h2>¡Pedir tu almuerzo ejecutivo es rápido y fácil! <br> </h2>
+                <p>Haz tu pedido online por WhatsApp y disfruta de una comida deliciosa sin complicaciones. ¡Escríbenos ahora!</p>
+                <a class="boton" href="#">Pedir ahora</a>
+            </div>
+        </section>
+    </main>        
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
@@ -102,5 +133,9 @@
             <p>&copy; 2025 La Sazón de Vivi. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+
+    <script src="/js/app.js" defer></script>
 </body>
+
 </html>
