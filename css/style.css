@@ -335,6 +335,49 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     color: var(--blanco);
     border: 0.1rem solid var(--blanco);
 }
+
+/**MENU DEL DIA**/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/** Productos **/
+.menu {
+    padding: 1rem;
+    border: 0.1rem var(--oscuro) solid;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__nombre{
+    font-size: 2rem;
+}
+
+.menu_precio{
+    font-size: 1.6rem;
+}
+
+.menu__orden{
+    max-width: 3.6rem;
+}
+
+.menu__nombre,
+.menu_precio{
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
 .footer {
     background-color: var(--primario);
     color: white;
