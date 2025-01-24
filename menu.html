@@ -10,7 +10,7 @@
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="htmlMenu">
     
     <header>
         <h1>LA SAZÓN DE VIVI</h1>
@@ -31,29 +31,6 @@
         <h1 class="contenedor__titulo">Menú del día</h1>
 
         <div class="grid">
-            <div class="menu">
-                <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
-                <div class="menu__informacion">
-                    <h3 class="menu__nombre">Costillas BBQ</h3>
-                    <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="menu__auxiliar">
-                        <p class="menu_precio">$16.000</p>
-                        <a class="enviarPedido" href="#"><img class="menu__orden" src="img/hacerOrden.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="menu">
-                <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
-                <div class="menu__informacion">
-                    <h3 class="menu__nombre">Costillas BBQ</h3>
-                    <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="menu__auxiliar">
-                        <p class="menu_precio">$16.000</p>
-                        <a class="enviarPedido" href="#"><img class="menu__orden" src="img/hacerOrden.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
 
             <div class="menu">
                 <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
@@ -62,48 +39,92 @@
                     <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="menu__auxiliar">
                         <p class="menu_precio">$16.000</p>
-                        <a class="enviarPedido" href="#"><img class="menu__orden" src="img/hacerOrden.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu">
-                <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
-                <div class="menu__informacion">
-                    <h3 class="menu__nombre">Costillas BBQ</h3>
-                    <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="menu__auxiliar">
-                        <p class="menu_precio">$16.000</p>
-                        <a class="enviarPedido" href="#"><img class="menu__orden" src="img/hacerOrden.png" alt=""></a>
+                        <button class="enviarPedido" onclick="mostrarPedido()"><img class="menu__orden" src="img/hacerOrden.png" alt=""></button>
                     </div>
                 </div>
             </div>
             
             <div class="menu">
-                <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
+                <img class="menu__imagen" src="img/albondigas.png" alt="albondigas">
                 <div class="menu__informacion">
-                    <h3 class="menu__nombre">Costillas BBQ</h3>
+                    <h3 class="menu__nombre">Albondigas</h3>
                     <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="menu__auxiliar">
                         <p class="menu_precio">$16.000</p>
-                        <a class="enviarPedido" href="#"><img class="menu__orden" src="img/hacerOrden.png" alt=""></a>
+                        <button class="enviarPedido" onclick="mostrarPedido()"><img class="menu__orden" src="img/hacerOrden.png" alt=""></button>
                     </div>
                 </div>
             </div>
 
             <div class="menu">
-                <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
+                <img class="menu__imagen" src="img/mojarra.png" alt="mojarra">
                 <div class="menu__informacion">
-                    <h3 class="menu__nombre">Costillas BBQ</h3>
+                    <h3 class="menu__nombre">Mojarra frita</h3>
                     <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="menu__auxiliar">
                         <p class="menu_precio">$16.000</p>
-                        <a class="enviarPedido" href="#"><img class="menu__orden" src="img/hacerOrden.png" alt=""></a>
+                        <button class="enviarPedido" onclick="mostrarPedido()"><img class="menu__orden" src="img/hacerOrden.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu">
+                <img class="menu__imagen" src="img/pastaschamp.jpg" alt="pastas con champiñones">
+                <div class="menu__informacion">
+                    <h3 class="menu__nombre">Pastas con champiñones</h3>
+                    <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="menu__auxiliar">
+                        <p class="menu_precio">$16.000</p>
+                        <button class="enviarPedido" onclick="mostrarPedido()"><img class="menu__orden" src="img/hacerOrden.png" alt=""></button>
                     </div>
                 </div>
             </div>
             
+            <div class="menu">
+                <img class="menu__imagen" src="img/bandejapaisa.png" alt="bandeja paisa">
+                <div class="menu__informacion">
+                    <h3 class="menu__nombre">Bandeja paisa</h3>
+                    <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="menu__auxiliar">
+                        <p class="menu_precio">$16.000</p>
+                        <button class="enviarPedido" onclick="mostrarPedido()"><img class="menu__orden" src="img/hacerOrden.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu">
+                <img class="menu__imagen" src="img/polloguisado.png" alt="pollo guisado">
+                <div class="menu__informacion">
+                    <h3 class="menu__nombre">Pollo guisado</h3>
+                    <p class="menu__descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="menu__auxiliar">
+                        <p class="menu_precio">$16.000</p>
+                        <button class="enviarPedido" onclick="mostrarPedido()"><img class="menu__orden" src="img/hacerOrden.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
         </div> <!--MENU MAIN-->
+
+       
+
+        <div class="infoDiv" id="infoDiv">
+            <div class="contenidoInfo">
+                <h1>PEDIDO</h1>
+                <div class="contenidoInfo__imagen">
+                    <img class="contenidoInfo__imagen" src="img/costillas.png" alt="costillas BBQ">
+                </div>
+                <div class="contenidoInfo__descripcion">
+                    <h2>Costillas BBQ</h2><p>Granos del día(Zaragozas, lentejas) Papitas, patacones, ensalada</p>
+                </div>
+                <h2>Acompañamientos</h2>
+                <form>
+
+                </form>
+                <button id="cerrarDiv" onclick="cerrarPedido()">Cerrar</button>
+            </div>
+        </div>
+
+        <div id="overlay" style="display: none;"></div>
     </main>   
     
     <footer class="footer">

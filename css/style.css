@@ -38,6 +38,10 @@ h1, h2, h3{
     text-align: center;
 }
 
+img{
+    max-width: 100%;
+}
+
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
@@ -361,10 +365,9 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
+    
 }
-.menu__imagen{
-    max-width: 100%;
-}
+
 .menu__nombre{
     font-size: 2rem;
     text-align: start;
@@ -389,6 +392,76 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     justify-content: space-between; 
 }
 
+/*CARD DE INFORMACION DE PEDIDO*/
+
+
+.infoDiv{
+    display: none; 
+    z-index: 9999;
+}
+
+.contenidoInfo{
+    position: absolute;
+    border: 0.1rem var(--oscuro) solid;
+    background-color: var(--blanco);
+    top: 50rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.contenidoInfo__imagen{
+    border-radius: 2rem;
+    width: 25rem;
+}
+
+.contenidoInfo__descripcion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.contenidoInfo h2{
+    font-size: 2.4rem;
+}
+
+.contenidoInfo__descripcion p{
+    max-width: 28rem;
+}
+@media (min-width: 768px){ 
+    .contenidoInfo__descripcion {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        gap: 1rem;
+        flex-direction: row;
+    }
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);/* Fondo oscuro con opacidad */
+    z-index: 9998; /* Debe estar detrás del infoDiv */
+  }
+
+
+.enviarPedido{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*PIE DE PAGINA*/
 .footer {
     background-color: var(--primario);
     color: white;
