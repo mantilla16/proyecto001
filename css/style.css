@@ -349,17 +349,26 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     }
 }
 
-/** Productos **/
+/** Menu **/
+.mainMenu{
+    margin: 0 auto 3rem auto;
+}
+
 .menu {
+    margin: 1rem;
     padding: 1rem;
     border: 0.1rem var(--oscuro) solid;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
 }
-
+.menu__imagen{
+    max-width: 100%;
+}
 .menu__nombre{
     font-size: 2rem;
+    text-align: start;
+    line-height: 1.2;
 }
 
 .menu_precio{
@@ -370,13 +379,15 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     max-width: 3.6rem;
 }
 
-.menu__nombre,
-.menu_precio{
-    margin: 1rem 0;
-    text-align: center;
-    line-height: 1.2;
+.menu__descripcion{
+    margin-top: 3rem;
 }
 
+.menu__auxiliar{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between; 
+}
 
 .footer {
     background-color: var(--primario);
@@ -418,6 +429,4 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     margin-top: 2rem;
     font-size: 1.4rem;
   }
-img{
-    max-width: 80%;
-}
+
