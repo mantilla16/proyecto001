@@ -1,4 +1,4 @@
-if (window.location.pathname.endsWith('/')) {
+if (window.location.pathname.endsWith('/') || window.location.pathname.includes('index')) {
     // Seleccionar los elementos clave
     const carouselInner = document.querySelector('.carousel-inner');
     const prevButton = document.querySelector('.prev');
@@ -44,7 +44,8 @@ if (window.location.pathname.endsWith('/')) {
     updateCarousel();
 }
 
-if (window.location.pathname.endsWith('menu')) {
+  
+if (window.location.pathname.includes('menu')) {
 
    function mostrarPedido(){
         const infoDiv = document.getElementById('infoDiv');
