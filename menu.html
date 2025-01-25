@@ -117,8 +117,58 @@
                     <h2>Costillas BBQ</h2><p>Granos del día(Zaragozas, lentejas) Papitas, patacones, ensalada</p>
                 </div>
                 <h2>Acompañamientos</h2>
-                <form>
+                <form class="menu__opciones">
+                    <fieldset class="grupo-arroz">
+                        <legend class="tipo__opcion">Tipos de Arroz</legend>
+                        <div>
+                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
+                            <label for="arroz-coco">Coco</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
+                            <label for="arroz-blanco">Blanco</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="arroz-fideo" name="arroz" value="fideo">
+                            <label for="arroz-fideo">Fideo</label>
+                        </div>
+                    </fieldset>
 
+                    <fieldset class="grupo-ensaladas">
+                        <legend class="tipo__opcion">Ensalada</legend>
+                        <div>
+                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
+                            <label for="arroz-coco">Sin ensalda</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
+                            <label for="arroz-blanco">Con ensalada</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="grupo-granos">
+                        <legend class="tipo__opcion">Granos</legend>
+                        <div>
+                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
+                            <label for="arroz-coco">Sin granos</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
+                            <label for="arroz-blanco">Con granos</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="grupo-sopas">
+                        <legend class="tipo__opcion">Sopa</legend>
+                        <div>
+                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
+                            <label for="arroz-coco">Sin sopa</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
+                            <label for="arroz-blanco">Con sopa</label>
+                        </div>
+                    </fieldset>
                 </form>
                 <button id="cerrarDiv" onclick="cerrarPedido()">Cerrar</button>
             </div>

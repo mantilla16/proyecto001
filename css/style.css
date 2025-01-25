@@ -5,6 +5,8 @@
     --gris: #757575;
     --grisClaro: #DFE9F3;
     --pielPastel: #f3e9df;
+    --fuentePrincipal: 'Krub', sans-serif;
+
 }
 
 html{ 
@@ -18,7 +20,7 @@ html{
 
 body{
     font-size: 16px; /*1rem = 10px*/
-    font-family: 'Krub', sans-serif;
+    font-family: var(--fuentePrincipal);
     background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
@@ -365,7 +367,11 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    
+}
+
+.menu__imagen,
+.contenidoInfo__imagen{
+    border-radius: 2rem;
 }
 
 .menu__nombre{
@@ -404,7 +410,7 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     position: absolute;
     border: 0.1rem var(--oscuro) solid;
     background-color: var(--blanco);
-    top: 50rem;
+    top: 10rem;
     z-index: 9999;
     display: flex;
     flex-direction: column;
@@ -414,7 +420,6 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
 }
 
 .contenidoInfo__imagen{
-    border-radius: 2rem;
     width: 25rem;
 }
 
@@ -442,6 +447,37 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     }
 }
 
+.menu__opciones{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.grupo-arroz, .grupo-ensaladas, .grupo-granos, .grupo-sopas{
+    font-family: var(--fuentePrincipal);
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 1.4rem;
+    margin: 2rem;
+}
+@media (min-width: 768px){ 
+    .grupo-arroz, .grupo-ensaladas, .grupo-granos, .grupo-sopas{
+        font-family: var(--fuentePrincipal);
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        border: none;
+        padding: 1.4rem;
+        margin: 2rem;
+    }
+}
+
+
+
+.tipo__opcion{
+    font-weight: bold;
+    font-size: 2rem;
+}
 
 #overlay {
     position: fixed;
