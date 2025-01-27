@@ -1,3 +1,16 @@
+function isMobile() {
+    if (sessionStorage.desktop)
+        return false;
+    else if (localStorage.mobile)
+        return true;
+    var mobile = ['iphone', 'ipad', 'android', 'blackberry', 'nokia', 'opera mini', 'windows mobile', 'windows phone', 'iemobile'];
+    for (var i in mobile)
+        if (navigator.userAgent.toLowerCase().indexOf(mobile[i].toLowerCase()) > 0) return true;
+    return false;
+}
+
+
+
 if (window.location.pathname.endsWith('/') || window.location.pathname.includes('index')) {
     // Seleccionar los elementos clave
     const carouselInner = document.querySelector('.carousel-inner');
@@ -59,19 +72,7 @@ if (window.location.pathname.includes('menu')) {
             overlayDiv.style.display = 'block';
         }
    }
-   function cerrarPedido(){
-        const infoDiv = document.getElementById('infoDiv');    
-        const overlayDiv = document.getElementById('overlay');
-        const pedidos = document.getElementById('Listapedidos');
-        
-        if(infoDiv && overlayDiv && pedidos){
-            infoDiv.style.display = 'none';
-            overlayDiv.style.display= 'none';
-            pedidos.style.display = 'none';
-        }
-
-      
-   }
+   
 
    var pedido = [];
    document.getElementById('guardar-pedido').addEventListener('click', function () {
@@ -119,6 +120,41 @@ if (window.location.pathname.includes('menu')) {
             `;
             verOrden.innerHTML += pedidoHTML;
         });
-   } 
+   }
+
+
+    const urlDesktop = 'https://web.whatsapp.com/';
+    const urlMobile = 'whatsapp://';
+    const telefono = '3115697605';
+
+        
+   
+   function cerrarPedido(){
+    const infoDiv = document.getElementById('infoDiv');    
+    const overlayDiv = document.getElementById('overlay');
+    const pedidos = document.getElementById('Listapedidos');
+    
+    if(infoDiv && overlayDiv && pedidos){
+        infoDiv.style.display = 'none';
+        overlayDiv.style.display= 'none';
+        pedidos.style.display = 'none';
+    }
+
+
+    pedido.forEach((p, index) => {
+        setTimeout(() => {
+            let mensaje = 'send?phone=' + telefono + '&text=*PEDIDO '+ index+1 +'*%0A*¿Cual es tu nombre?*%0A' + p.plato + '%0A*¿Cuáles son tus apellidos?*%0A' + p.arroz + '%0A*¿Cuál es tu correo electrónico?*%0A' + p.granos + ''
+            if(isMobile()) {
+                window.open(urlMobile + mensaje, '_blank')
+            }else{
+                window.open(urlDesktop + mensaje, '_blank')
+            }
+            buttonSubmit.innerHTML = '<i class="fab fa-whatsapp"></i> Enviar WhatsApp'
+            buttonSubmit.disabled = false
+        }, 3000);
+
+    });
+  
+}
 
 }
