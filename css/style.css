@@ -490,12 +490,45 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
   }
 
 
-.enviarPedido{
+.enviarPedido, .añadir-pedido, .OrderNow{
     background: none;
     border: none;
     cursor: pointer;
 }
 
+
+
+/*Menu flotante*/
+
+.menuFlotante{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 2rem;
+    z-index: 9999;
+}
+
+/*LISTA DE PEDIDOS*/
+
+
+.contenedor .pedido{
+    display: none;
+    z-index: 9999;
+
+}
+
+.pedido__info{
+    position: absolute;
+    border: 0.1rem var(--oscuro) solid;
+    background-color: var(--blanco);
+    top: 10rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    border-radius: 2rem;
+}
 
 /*PIE DE PAGINA*/
 .footer {

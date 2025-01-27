@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 <body class="htmlMenu">
     
@@ -32,7 +34,7 @@
 
         <div class="grid">
 
-            <div class="menu">
+            <div class="menu" id="plato1__Costillas">
                 <img class="menu__imagen" src="img/costillas.png" alt="costillas bbq">
                 <div class="menu__informacion">
                     <h3 class="menu__nombre">Costillas BBQ</h3>
@@ -44,7 +46,7 @@
                 </div>
             </div>
             
-            <div class="menu">
+            <div class="menu"id="plato1__Albondigas">
                 <img class="menu__imagen" src="img/albondigas.png" alt="albondigas">
                 <div class="menu__informacion">
                     <h3 class="menu__nombre">Albondigas</h3>
@@ -56,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="menu">
+            <div class="menu"id="plato1__Mojarra">
                 <img class="menu__imagen" src="img/mojarra.png" alt="mojarra">
                 <div class="menu__informacion">
                     <h3 class="menu__nombre">Mojarra frita</h3>
@@ -68,7 +70,7 @@
                 </div>
             </div>
 
-            <div class="menu">
+            <div class="menu"id="plato1__PastasChamp">
                 <img class="menu__imagen" src="img/pastaschamp.jpg" alt="pastas con champiñones">
                 <div class="menu__informacion">
                     <h3 class="menu__nombre">Pastas con champiñones</h3>
@@ -80,7 +82,7 @@
                 </div>
             </div>
             
-            <div class="menu">
+            <div class="menu"id="plato1__BandejaPaisa">
                 <img class="menu__imagen" src="img/bandejapaisa.png" alt="bandeja paisa">
                 <div class="menu__informacion">
                     <h3 class="menu__nombre">Bandeja paisa</h3>
@@ -92,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="menu">
+            <div class="menu" id="plato1__PolloGuisado">
                 <img class="menu__imagen" src="img/polloguisado.png" alt="pollo guisado">
                 <div class="menu__informacion">
                     <h3 class="menu__nombre">Pollo guisado</h3>
@@ -105,8 +107,6 @@
             </div>
         </div> <!--MENU MAIN-->
 
-       
-
         <div class="infoDiv" id="infoDiv">
             <div class="contenidoInfo">
                 <h1>PEDIDO</h1>
@@ -114,22 +114,22 @@
                     <img class="contenidoInfo__imagen" src="img/costillas.png" alt="costillas BBQ">
                 </div>
                 <div class="contenidoInfo__descripcion">
-                    <h2>Costillas BBQ</h2><p>Granos del día(Zaragozas, lentejas) Papitas, patacones, ensalada</p>
+                    <h2 id="nombre__plato">Costillas BBQ</h2><p>Granos del día(Zaragozas, lentejas) Papitas, patacones, ensalada</p>
                 </div>
                 <h2>Acompañamientos</h2>
                 <form class="menu__opciones">
                     <fieldset class="grupo-arroz">
                         <legend class="tipo__opcion">Tipos de Arroz</legend>
                         <div>
-                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
+                            <input type="radio"  name="arroz" value="coco">
                             <label for="arroz-coco">Coco</label>
                         </div>
                         <div>
-                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
+                            <input type="radio" name="arroz" value="blanco">
                             <label for="arroz-blanco">Blanco</label>
                         </div>
                         <div>
-                            <input type="radio" id="arroz-fideo" name="arroz" value="fideo">
+                            <input type="radio"  name="arroz" value="fideo">
                             <label for="arroz-fideo">Fideo</label>
                         </div>
                     </fieldset>
@@ -137,45 +137,95 @@
                     <fieldset class="grupo-ensaladas">
                         <legend class="tipo__opcion">Ensalada</legend>
                         <div>
-                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
-                            <label for="arroz-coco">Sin ensalda</label>
+                            <input type="radio"  name="ensalada" value="sin-ensalada">
+                            <label for="sin-ensalada">Sin ensalda</label>
                         </div>
                         <div>
-                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
-                            <label for="arroz-blanco">Con ensalada</label>
+                            <input type="radio"  name="ensalada" value="con-ensalada">
+                            <label for="con-ensalada">Con ensalada</label>
                         </div>
                     </fieldset>
 
                     <fieldset class="grupo-granos">
                         <legend class="tipo__opcion">Granos</legend>
                         <div>
-                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
-                            <label for="arroz-coco">Sin granos</label>
+                            <input type="radio" name="granos" value="sin-granos">
+                            <label for="sin-granos">Sin granos</label>
                         </div>
                         <div>
-                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
-                            <label for="arroz-blanco">Con granos</label>
+                            <input type="radio" name="granos" value="con-granos">
+                            <label for="con-granos">Con granos</label>
                         </div>
                     </fieldset>
 
                     <fieldset class="grupo-sopas">
                         <legend class="tipo__opcion">Sopa</legend>
                         <div>
-                            <input type="radio" id="arroz-coco" name="arroz" value="coco">
-                            <label for="arroz-coco">Sin sopa</label>
+                            <input type="radio" name="sopa" value="sin-sopa">
+                            <label for="sin-sopa">Sin sopa</label>
                         </div>
                         <div>
-                            <input type="radio" id="arroz-blanco" name="arroz" value="blanco">
-                            <label for="arroz-blanco">Con sopa</label>
+                            <input type="radio" name="sopa" value="con-sopa">
+                            <label for="con-sopa">Con sopa</label>
                         </div>
                     </fieldset>
                 </form>
-                <button id="cerrarDiv" onclick="cerrarPedido()">Cerrar</button>
+                <button id="guardar-pedido" class="añadir-pedido" onclick="cerrarPedido()"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                    <path d="M12.5 17h-6.5v-14h-2" />
+                    <path d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5" />
+                    <path d="M16 19h6" />
+                    <path d="M19 16v6" />
+                  </svg></button>
             </div>
         </div>
-
         <div id="overlay" style="display: none;"></div>
+
+        <div class="menuFlotante">
+            
+            <button class="OrderNow" onclick="listarPedidos()">
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="0.75"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M21 15h-2.5c-.398 0 -.779 .158 -1.061 .439c-.281 .281 -.439 .663 -.439 1.061c0 .398 .158 .779 .439 1.061c.281 .281 .663 .439 1.061 .439h1c.398 0 .779 .158 1.061 .439c.281 .281 .439 .663 .439 1.061c0 .398 -.158 .779 -.439 1.061c-.281 .281 -.663 .439 -1.061 .439h-2.5" />
+                <path d="M19 21v1m0 -8v1" />
+                <path d="M13 21h-7c-.53 0 -1.039 -.211 -1.414 -.586c-.375 -.375 -.586 -.884 -.586 -1.414v-10c0 -.53 .211 -1.039 .586 -1.414c.375 -.375 .884 -.586 1.414 -.586h2m12 3.12v-1.12c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-2" />
+                <path d="M16 10v-6c0 -.53 -.211 -1.039 -.586 -1.414c-.375 -.375 -.884 -.586 -1.414 -.586h-4c-.53 0 -1.039 .211 -1.414 .586c-.375 .375 -.586 .884 -.586 1.414v6m8 0h-8m8 0h1m-9 0h-1" />
+                <path d="M8 14v.01" />
+                <path d="M8 17v.01" />
+                <path d="M12 13.99v.01" />
+                <path d="M12 17v.01" />
+              </svg>
+            </button>
+        </div>
+
+        <div class="contenedor pedido" id="Listapedidos">
+            <div class="pedido__info">
+                <h2>Costillas BBQ</h2>
+                <p>Granos del día(Zaragozas, lentejas) Papitas, patacones, ensalada</p>
+                <div class="enviarOrden" id="enviarOrden"></div>
+                <button onclick="cerrarPedido()">Cerrar</button>
+            </div>
+        </div>
     </main>   
+
+    
     
     <footer class="footer">
         <div class="footer-container">
