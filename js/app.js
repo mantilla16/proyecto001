@@ -130,31 +130,39 @@ if (window.location.pathname.includes('menu')) {
         
    
    function cerrarPedido(){
-    const infoDiv = document.getElementById('infoDiv');    
-    const overlayDiv = document.getElementById('overlay');
-    const pedidos = document.getElementById('Listapedidos');
-    
-    if(infoDiv && overlayDiv && pedidos){
-        infoDiv.style.display = 'none';
-        overlayDiv.style.display= 'none';
-        pedidos.style.display = 'none';
+        const infoDiv = document.getElementById('infoDiv');    
+        const overlayDiv = document.getElementById('overlay');        
+        if(infoDiv && overlayDiv){
+            infoDiv.style.display = 'none';
+            overlayDiv.style.display= 'none';
+        }
     }
 
+    function enviarPedidoWP(){
+        const overlayDiv = document.getElementById('overlay');
+        const pedidos = document.getElementById('Listapedidos');
 
-    pedido.forEach((p, index) => {
-        setTimeout(() => {
-            let mensaje = 'send?phone=' + telefono + '&text=*PEDIDO '+ index+1 +'*%0A*¿Cual es tu nombre?*%0A' + p.plato + '%0A*¿Cuáles son tus apellidos?*%0A' + p.arroz + '%0A*¿Cuál es tu correo electrónico?*%0A' + p.granos + ''
-            if(isMobile()) {
-                window.open(urlMobile + mensaje, '_blank')
-            }else{
-                window.open(urlDesktop + mensaje, '_blank')
-            }
-            buttonSubmit.innerHTML = '<i class="fab fa-whatsapp"></i> Enviar WhatsApp'
-            buttonSubmit.disabled = false
-        }, 3000);
+        if(pedidos && overlayDiv){
+            pedidos.style.display = 'none';
+            overlayDiv.style.display= 'none';
+        }
 
-    });
-  
-}
+        let mensajeCompleto='*PEDIDO COMPLETO*%0A';
+        pedido.forEach((p, index) => {
+            mensajeCompleto += `*Pedido ${index + 1}:*%0A`;
+            mensajeCompleto += `- Plato: ${p.plato}%0A`;
+            mensajeCompleto += `- Arroz: ${p.arroz}%0A`;
+            mensajeCompleto += `- Ensalada: ${p.ensalada}%0A`;
+            mensajeCompleto += `- Granos: ${p.sopa}%0A`;
+            mensajeCompleto += `- Granos: ${p.granos}%0A%0A`;
+        });
+        let mensaje = 'send?phone=' + telefono + '&text=' + mensajeCompleto;
+        
+        if(isMobile()) {
+            window.open(urlMobile + mensaje, '_blank')
+        }else{
+            window.open(urlDesktop + mensaje, '_blank')
+        }
+    }
 
 }
