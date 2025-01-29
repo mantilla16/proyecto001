@@ -191,7 +191,6 @@
         <div id="overlay" style="display: none;"></div>
 
         <div class="menuFlotante">
-            
             <button class="OrderNow" onclick="listarPedidos()">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -217,10 +216,36 @@
 
         <div class="contenedor pedido" id="Listapedidos">
             <div class="pedido__info">
-                <h2>Costillas BBQ</h2>
-                <p>Granos del día(Zaragozas, lentejas) Papitas, patacones, ensalada</p>
+                <h2>Confirmar pedido</h2>
+                <p>Por favor indicar la torre y el apto. Si es fuera de alameda indicar su nombre y direccion </p>
+                
                 <div class="enviarOrden" id="enviarOrden"></div>
-                <button onclick="enviarPedidoWP()">Cerrar</button>
+
+                <form class="informacionAdicional">
+                    <fieldset class="medioDePago">
+                        <legend class="tipo__opcion">Medio de pago</legend>
+                        <div>
+                            <input type="radio" name="pago" value="efectivo">
+                            <label for="efectivo">Efectivo</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="pago" value="transferencia">
+                            <label for="transferencia">transferencia</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="grupo-direcciones">
+                        <legend class="tipo__opcion">Informacion adcional</legend>
+                        <div>
+                            <input type="text" class="informacionAdicional-direccion" id="infoadicional" placeholder="Ingrese direccion o conjunto y torre">
+                        </div>
+                    </fieldset>
+
+                </form>
+                <div class="pedido__botones">
+                    <button onclick="enviarPedidoWP()">Enviar pedido</button>
+                    <button onclick="tomarOtroPedido()">Tomar otro pedido</button>
+                </div>
             </div>
         </div>
     </main>   

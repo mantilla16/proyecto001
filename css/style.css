@@ -447,12 +447,15 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     }
 }
 
-.menu__opciones{
+
+/*DISEÑO DEL FORMULARIO DE OPCIONES E INFROMACION ADICIONAL*/
+
+.menu__opciones, .informacionAdicional{
     width: 100%;
     margin-top: 2rem;
 }
 
-.grupo-arroz, .grupo-ensaladas, .grupo-granos, .grupo-sopas{
+.grupo-arroz, .grupo-ensaladas, .grupo-granos, .grupo-sopas, .medioDePago, .grupo-direcciones{
     font-family: var(--fuentePrincipal);
     display: flex;
     flex-direction: column;
@@ -461,7 +464,7 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     margin: 2rem;
 }
 @media (min-width: 768px){ 
-    .grupo-arroz, .grupo-ensaladas, .grupo-granos, .grupo-sopas{
+    .grupo-arroz, .grupo-ensaladas, .grupo-granos, .grupo-sopas, .medioDePago, .grupo-direcciones{
         font-family: var(--fuentePrincipal);
         display: flex;
         justify-content: space-evenly;
@@ -472,11 +475,13 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     }
 }
 
-
-
 .tipo__opcion{
     font-weight: bold;
     font-size: 2rem;
+}
+
+.informacionAdicional-direccion{
+    max-height: 20rem;
 }
 
 #overlay {
@@ -494,6 +499,25 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.OrderNow{
+    background-color: var(--grisClaro);
+    border-radius: 5rem;
+}
+
+.pedido__botones{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) { 
+    .pedido__botones{
+        display: flex;
+        gap: 5rem;
+        flex-direction: row;
+    }
 }
 
 

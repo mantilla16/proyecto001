@@ -138,31 +138,49 @@ if (window.location.pathname.includes('menu')) {
         }
     }
 
+    function tomarOtroPedido(){
+        const pedidos = document.getElementById('Listapedidos');
+        const overlayDiv = document.getElementById('overlay');
+        if(infoDiv && overlayDiv){
+            pedidos.style.display = 'none';
+            overlayDiv.style.display= 'none';
+        }
+    }
+
     function enviarPedidoWP(){
         const overlayDiv = document.getElementById('overlay');
         const pedidos = document.getElementById('Listapedidos');
-
+        const infoAdicional = document.getElementById('infoadicional');
+        const radioPago= document.querySelector('input[name="pago"]:checked');
         if(pedidos && overlayDiv){
             pedidos.style.display = 'none';
             overlayDiv.style.display= 'none';
         }
 
         let mensajeCompleto='*PEDIDO COMPLETO*%0A';
-        pedido.forEach((p, index) => {
-            mensajeCompleto += `*Pedido ${index + 1}:*%0A`;
-            mensajeCompleto += `- Plato: ${p.plato}%0A`;
-            mensajeCompleto += `- Arroz: ${p.arroz}%0A`;
-            mensajeCompleto += `- Ensalada: ${p.ensalada}%0A`;
-            mensajeCompleto += `- Granos: ${p.sopa}%0A`;
-            mensajeCompleto += `- Granos: ${p.granos}%0A%0A`;
-        });
-        let mensaje = 'send?phone=' + telefono + '&text=' + mensajeCompleto;
-        
-        if(isMobile()) {
-            window.open(urlMobile + mensaje, '_blank')
+        if(pedido.length === 0){
+            alert('No hay pedidos para enviar');
+            return;
         }else{
-            window.open(urlDesktop + mensaje, '_blank')
+            pedido.forEach((p, index) => {
+                mensajeCompleto += `*Pedido ${index + 1}:*%0A`;
+                mensajeCompleto += `- Plato: ${p.plato}%0A`;
+                mensajeCompleto += `- Arroz: ${p.arroz}%0A`;
+                mensajeCompleto += `- Ensalada: ${p.ensalada}%0A`;
+                mensajeCompleto += `- Granos: ${p.sopa}%0A`;
+                mensajeCompleto += `- Granos: ${p.granos}%0A%0A`; 
+            });
+                mensajeCompleto += `Medio de pago: ${radioPago.value}%0A%0A`;
+                mensajeCompleto += `Información adicional: ${infoAdicional.value}%0A%0A`;
+            let mensaje = 'send?phone=' + telefono + '&text=' + mensajeCompleto;
+            
+            if(isMobile()) {
+                window.open(urlMobile + mensaje, '_blank')
+                document.querySelector('.informacionAdicional').reset();
+            }else{
+                window.open(urlDesktop + mensaje, '_blank')
+                document.querySelector('.informacionAdicional').reset();
+            }
         }
     }
-
 }
