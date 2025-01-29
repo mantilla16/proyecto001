@@ -437,6 +437,7 @@ a partir de 400px en adelante, menor a 400px cambia el diseño*/
 .contenidoInfo__descripcion p{
     max-width: 28rem;
 }
+
 @media (min-width: 768px){ 
     .contenidoInfo__descripcion {
         display: flex;
